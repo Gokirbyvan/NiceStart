@@ -3,10 +3,18 @@
     <style name="Base.Theme.NiceStart" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="actionBarStyle">@style/TransparentActionBar</item>
     </style>
 
     <style name="Theme.NiceStart" parent="Base.Theme.NiceStart" />
     <style name="Theme.NiceStart.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
+
+    </style>
+
+    <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="background">@android:color/transparent</item>
+        <item name="displayOptions">showHome</item>
+        <item name="android:elevation">0dp</item>
     </style>
 </resources>
