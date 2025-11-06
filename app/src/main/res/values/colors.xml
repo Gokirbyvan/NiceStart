@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="Negro">#000000</color>
+    <color name="Blanco">#FFFFFF</color>
     <color name="gradiaInicio">#BF3945</color>
     <color name="gradiaFinal">#F2EA7E</color>
-    <color name="Contraste">#FFFFFF</color>
+    <color name="Contraste">#FFFFF1</color>
+    <color name="AzulBrillante">#7BEAFF</color>
 </resources>

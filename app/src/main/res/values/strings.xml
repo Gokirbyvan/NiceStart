@@ -4,4 +4,8 @@
     <string name="Password">password</string>
     <string name="btnAcceder">Acceder</string>
     <string name="btnRegistrarse">Registrarse</string>
+    <string name="newuser">Nombre del usuario</string>
+    <string name="newPassword">Contraseña</string>
+    <string name="confirmPassword">Confirmación contraseña</string>
+    <string name="btncrearcuenta">Crear Cuenta</string>
 </resources>

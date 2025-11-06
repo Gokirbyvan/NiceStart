@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/login"
+    android:id="@+id/signup"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient">
+    android:background="@drawable/registrogradient">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -54,7 +55,7 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/Contraste"
-            android:hint="@string/User" />
+            android:hint="@string/newuser" />
 
 
 
@@ -62,6 +63,7 @@
 
 
     </com.google.android.material.textfield.TextInputLayout>
+
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -84,18 +86,11 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/Contraste"
-            android:hint="@string/Password"
+            android:hint="@string/newPassword"
 
 
             />
-
-
-
-
-
-
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till3"
@@ -106,30 +101,34 @@
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till2"
+        app:passwordToggleEnabled="true"
 
 
         >
 
-        <Button
+        <EditText
+            android:id="@+id/etPassword2"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/till3"
-            style="@style/Widget.MaterialComponents.Button"
-            android:backgroundTint="@color/buttoncustom"
-            android:textColor="@color/Negro"
-            android:text="@string/btnAcceder"
-            android:onClick="openMain"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:background="@color/Contraste"
+            android:hint="@string/confirmPassword"
+
 
             />
 
+
+
+
+
+
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
 
 
         app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -140,16 +139,22 @@
         >
 
         <Button
-            app:layout_constraintTop_toBottomOf="@+id/till3"
-            android:text="@string/btnRegistrarse"
-
-            style="@style/buttonoutlined"
-            android:onClick="openSign"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/buttoncustom"
+            android:text="@string/btncrearcuenta"
+            android:textColor="@color/Negro"
+            app:layout_constraintTop_toBottomOf="@+id/till4"
 
 
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+
+
 
 
 
