@@ -3,6 +3,9 @@
 **I ate my project that is all i love you bye**
 
 ![login_activity](img/login.png)
+![login_activity](img/signup.png)
+
+
 
 
 **Creador del proyecto**  
