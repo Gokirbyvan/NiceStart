@@ -4,250 +4,252 @@
 
 ![login_activity](img/login.png)
 
-Creador del proyecto
-ivan
 
-Autor del README
+**Creador del proyecto**  
 ivan
 
-Programador principal
+**Autor del README**  
 ivan
 
-Subprogramador de respaldo (por si acaso)
-Dela
+**Programador principal**  
+ivan
 
-Director creativo
+**Subprogramador de respaldo (por si acaso)**  
 ivan
 
-Productor ejecutivo
+**Director creativo**  
 ivan
 
-Director técnico
+**Productor ejecutivo**  
 ivan
 
-Ingeniero de sonido (efectos imaginarios)
+**Director técnico**  
 ivan
 
-Diseñador de interfaz
+**Ingeniero de sonido (efectos imaginarios)**  
 ivan
 
-Maquetador CSS
+**Diseñador de interfaz**  
 ivan
 
-Ingeniero de infraestructura
+**Maquetador CSS**  
 ivan
 
-Administrador de servidores
+**Ingeniero de infraestructura**  
 ivan
 
-Guardia de seguridad del repo
+**Administrador de servidores**  
 ivan
 
-Tester de estrés (pegando al teclado)
+**Guardia de seguridad del repo**  
 ivan
 
-QA (Quality Assurance y Queen of Apologies)
+**Tester de estrés (pegando al teclado)**  
 ivan
 
-Arquitecto de la base de datos
+**QA (Quality Assurance y Queen of Apologies)**  
 ivan
 
-Modelador de datos
+**Arquitecto de la base de datos**  
 ivan
 
-Depurador profesional
+**Modelador de datos**  
 ivan
 
-Manejador de excepciones
+**Depurador profesional**  
 ivan
 
-Revisor de commits
+**Manejador de excepciones**  
 ivan
 
-Policía de commits (mensaje obligatorio)
+**Revisor de commits**  
 ivan
 
-Autor de commits salvajes a las 3AM
+**Policía de commits (mensaje obligatorio)**  
 ivan
 
-Mantenedor del CI/CD
+**Autor de commits salvajes a las 3AM**  
 ivan
 
-Config master (Docker, scripts, magia)
+**Mantenedor del CI/CD**  
 ivan
 
-Generador de scripts de despliegue
+**Config master (Docker, scripts, magia)**  
 ivan
 
-Historietista de commits
+**Generador de scripts de despliegue**  
 ivan
 
-Redactor de CHANGELOG
+**Historietista de commits**  
 ivan
 
-Traductor automático (en su cabeza)
+**Redactor de CHANGELOG**  
 ivan
 
-Localizador internacional (solo español y sarcasmo)
+**Traductor automático (en su cabeza)**  
 ivan
 
-Creador del logo (robado descaradamente)
+**Localizador internacional (solo español y sarcasmo)**  
 ivan
 
-Director de arte
+**Creador del logo (dibujado con el ratón)**  
 ivan
 
-Animador (gif en loop)
+**Director de arte**  
 ivan
 
-Editor de vídeo (cortes épicos)
+**Animador (gif en loop)**  
 ivan
 
-Product Owner (señala con dedo)
+**Editor de vídeo (cortes épicos)**  
 ivan
 
-Scrum Master (grita sprint)
+**Product Owner (señala con dedo)**  
 ivan
 
-Planificador de sprints
+**Scrum Master (grita sprint)**  
 ivan
 
-Prioritizador de issues
+**Planificador de sprints**  
 ivan
 
-Cazador de bugs
+**Prioritizador de issues**  
 ivan
 
-Domador de dependencias
+**Cazador de bugs**  
 ivan
 
-Actualizador de paquetes
+**Domador de dependencias**  
 ivan
 
-Mago del package.json
+**Actualizador de paquetes**  
 ivan
 
-Conserje del repo (limpia ramas)
+**Mago del package.json**  
 ivan
 
-Administrador de ramas
+**Conserje del repo (limpia ramas)**  
 ivan
 
-Git whisperer
+**Administrador de ramas**  
 ivan
 
-Escritor de tests unitarios
+**Git whisperer**  
 ivan
 
-Escritor de tests de integración
+**Escritor de tests unitarios**  
 ivan
 
-Escritor de tests que pasan a la primera (mentira)
+**Escritor de tests de integración**  
 ivan
 
-Documentador (comentarios profundos)
+**Escritor de tests que pasan a la primera (mentira)**  
 ivan
 
-Ilustrador de diagramas UML (hechos con Paint)
+**Documentador (comentarios profundos)**  
 ivan
 
-Fotógrafo de pantalla (screenshots v1)
+**Ilustrador de diagramas UML (hechos con Paint)**  
 ivan
 
-Responsable de issues (asigna a...ivan)
+**Fotógrafo de pantalla (screenshots v1)**  
 ivan
 
-Moderador de PRs
+**Responsable de issues (asigna a... ivan)**  
 ivan
 
-Revisor de seguridad (mira todo con lupa)
+**Moderador de PRs**  
 ivan
 
-Auditor de licencias (elige MIT porque suena bien)
+**Revisor de seguridad (mira todo con lupa)**  
 ivan
 
-Contable (lleva la contabilidad imaginaria)
+**Auditor de licencias (elige MIT porque suena bien)**  
 ivan
 
-Relaciones públicas (publica un tweet)
+**Contable (lleva la contabilidad imaginaria)**  
 ivan
 
-CM (Community Manager — contesta con memes)
+**Relaciones públicas (publica un tweet)**  
 ivan
 
-Embajador de la marca
+**Community Manager (responde con memes)**  
 ivan
 
-Entrenador de onboarding
+**Embajador de la marca**  
 ivan
 
-Mentor de interns (a su gato)
+**Entrenador de onboarding**  
 ivan
 
-Capitán del README.md
+**Mentor de interns (a su gato)**  
 ivan
 
-Ilusionista de la documentación (aparece y desaparece)
+**Capitán del README.md**  
 ivan
 
-Cocinero de snacks para maratones de código
+**Ilusionista de la documentación (aparece y desaparece)**  
 ivan
 
-Proveedor oficial de café (virtual)
+**Cocinero de snacks para maratones de código**  
 ivan
 
-Ceremonial bug-fixer
+**Proveedor oficial de café (virtual)**  
 ivan
 
-Arquitecto de experiencia de usuario
+**Ceremonial bug-fixer**  
 ivan
 
-Psicólogo del usuario (escucha clicks)
+**Arquitecto de experiencia de usuario**  
 ivan
 
-Analista de métricas (mira Spreadsheet)
+**Psicólogo del usuario (escucha clicks)**  
 ivan
 
-SEO specialist (optimiza la palabra NiceStart)
+**Analista de métricas (mira Spreadsheet)**  
 ivan
 
-Tester de accesibilidad (tab, tab, tab)
+**SEO specialist (optimiza la palabra NiceStart)**  
 ivan
 
-Leyenda viva del teclado
+**Tester de accesibilidad (tab, tab, tab)**  
 ivan
 
-Embellecedor de commits
+**Leyenda viva del teclado**  
 ivan
 
-Firmante legal (firma con emoticono)
+**Embellecedor de commits**  
 ivan
 
-Diseñador de la mascotte (dibujada a mano alzada)
+**Firmante legal (firma con emoticono)**  
 ivan
 
-Guionista (escribe esta lista)
+**Diseñador de la mascota (dibujada a mano alzada)**  
 ivan
 
-Actor de voz (susurra "NiceStart")
+**Guionista (escribe esta lista)**  
 ivan
 
-Especialista en nombrado de variables
+**Actor de voz (susurra “NiceStart”)**  
 ivan
 
-Custodio del buen gusto
+**Especialista en nombrado de variables**  
 ivan
 
-Guardador de secretos (contraseñas en Notepad)
+**Custodio del buen gusto**  
 ivan
 
-Soporte técnico (responde a su propio issue)
+**Guardador de secretos (contraseñas en Notepad)**  
 ivan
 
-Backup humano (copia en su USB)
+**Soporte técnico (responde a su propio issue)**  
 ivan
 
-¡TODO LO DEMÁS!
+**Backup humano (copia en su USB)**  
 ivan
 
+**TODO LO DEMÁS**  
+ivan  
 
+**Renuncia**
+Estos creditos deben tomarse de la forma mas ironica posible
