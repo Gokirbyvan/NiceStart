@@ -6,19 +6,15 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/logofuego"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/logofuego_round"
-        android:alternateLauncherIcons="@mipmap/logofuego"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NiceStart">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".Login"
-            android:exported="true">
+            android:name=".Splash"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,15 +22,22 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
+            android:exported="true"
+            android:theme="@style/Theme.NiceStart.NoActionBar">
+
+        </activity>
+        <activity
             android:name=".SignUp"
             android:exported="true"
-            android:parentActivityName=".Login"
+            android:parentActivityName=".Login" />
 
-            >
-        </activity>
-
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
-
-
