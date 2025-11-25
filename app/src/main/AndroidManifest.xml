@@ -12,9 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NiceStart">
         <activity
+            android:name=".activity_fotoperfil"
+            android:exported="true" />
+        <activity
             android:name=".Splash"
-            android:exported="true"
-            >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,9 +29,7 @@
         <activity
             android:name=".Login"
             android:exported="true"
-            android:theme="@style/Theme.NiceStart.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.NiceStart.NoActionBar" />
         <activity
             android:name=".SignUp"
             android:exported="true"

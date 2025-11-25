@@ -24,8 +24,15 @@
         />
 
     <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="166dp"
+        android:id="@+id/Backview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="111dp"
         android:layout_height="111dp"
         android:layout_marginTop="264dp"
         android:src="@drawable/logofuego"
@@ -45,7 +52,10 @@
         android:textSize="48dp"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@id/Logo" />
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

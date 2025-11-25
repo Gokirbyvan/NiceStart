@@ -23,6 +23,13 @@
         />
 
     <ImageView
+        android:id="@+id/gatohmmm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
         android:id="@+id/Logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
