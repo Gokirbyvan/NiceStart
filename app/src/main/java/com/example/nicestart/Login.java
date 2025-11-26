@@ -46,15 +46,16 @@ public class Login extends AppCompatActivity {
     }
 
     public void openMain(View v){
+        //FLAG -> sales de la aplicacion si le das atras
         Intent intent = new Intent(Login.this, MainActivity.class);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 
     }
     public void openSign(View v){
         Intent intent = new Intent(Login.this, SignUp.class);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
 
