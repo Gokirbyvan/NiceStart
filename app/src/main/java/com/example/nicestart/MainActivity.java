@@ -20,7 +20,6 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.Snackbar;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,19 +29,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        // TEXTVIEW QUE TENDRÁ MENÚ CONTEXTUAL AL PULSARLO CON LONG-CLICK
         TextView mycontext = findViewById(R.id.mytext);
-        registerForContextMenu(mycontext);
+        registerForContextMenu(mycontext); // Activa menú contextual
+
+        // SwipeRefresh (gesto de arrastrar hacia abajo)
         swipeLayout = findViewById(R.id.swipe);
         swipeLayout.setOnRefreshListener(mOnRefreshListener);
     }
 
-    protected SwipeRefreshLayout.OnRefreshListener
-            mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+    // Listener del gesto de recargar
+    protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
         @Override
         public void onRefresh() {
+
             final ConstraintLayout mLayout = findViewById(R.id.main);
+
+            // Muestra mensaje tipo Snackbar
             Snackbar snackbar = Snackbar
                     .make(mLayout, "Page reset", Snackbar.LENGTH_SHORT)
                     .setAction("UNDO", new View.OnClickListener(){
@@ -52,18 +59,21 @@ public class MainActivity extends AppCompatActivity {
                             snackbar1.show();
                         }
                     });
+
             snackbar.show();
+
+            // Oculta el icono de recarga
             swipeLayout.setRefreshing(false);
         }
     };
 
+    // Botón que intenta abrir el “perfil de contactos” (no es una activity real)
     public void openProfile(View v) {
         Intent intent = new Intent(MainActivity.this, ContactsContract.Profile.class);
         startActivity(intent);
     }
 
-    //Implement context menu
-
+    // MENÚ CONTEXTUAL (press largo)
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.menu_context, menu);
@@ -71,16 +81,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
+
         if (item.getItemId() == R.id.item1) {
-            Toast toast = Toast.makeText(this, "item copied", Toast.LENGTH_LONG);
-            toast.show();
+            Toast.makeText(this, "item copied", Toast.LENGTH_LONG).show();
         } else if (item.getItemId() == R.id.item2) {
-            Toast toast2 = Toast.makeText(this, "item downloaded", Toast.LENGTH_LONG);
-            toast2.show();
+            Toast.makeText(this, "item downloaded", Toast.LENGTH_LONG).show();
         }
         return false;
     }
 
+    // MENÚ DE LA APPBAR (arriba a la derecha)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_appbar, menu);
@@ -89,19 +99,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         if (item.getItemId() == R.id.itemCopy) {
-            Toast toast = Toast.makeText(this, "item copied", Toast.LENGTH_LONG);
-            toast.show();
+            Toast.makeText(this, "item copied", Toast.LENGTH_LONG).show();
         } else if (item.getItemId() == R.id.itemSettings) {
-            Toast toast = Toast.makeText(this, "open settings", Toast.LENGTH_LONG);
-            toast.show();
+            Toast.makeText(this, "open settings", Toast.LENGTH_LONG).show();
         }
+
         return false;
     }
 }
-
-
-
-
-
-

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout: registro/crear cuenta.
+     Observaciones: similar a activity_login; incluye 3 EditText para usuario, contraseña y confirmación.
+     Recomendación: comprobar match entre etPassword y etPassword2 en Activity antes de enviar. -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,6 +25,8 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.85"
         />
+
+    <!-- Imagen de fondo (hijo_llora). Igual que antes, usar como background o ajustar alpha si tapa elementos -->
     <ImageView
         android:id="@+id/hijo_llora"
         android:layout_width="match_parent"
@@ -30,6 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    <!-- Logo arriba -->
     <ImageView
         android:id="@+id/Logo"
         android:layout_width="80dp"
@@ -40,20 +46,17 @@
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/Contraste"
-
         />
 
+    <!-- Usuario -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/Logo"
-
-
         >
 
         <EditText
@@ -63,28 +66,17 @@
             android:alpha="0.6"
             android:background="@color/Contraste"
             android:hint="@string/newuser" />
-
-
-
-
-
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
+    <!-- Contraseña -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till1"
         app:passwordToggleEnabled="true"
-
-
         >
 
         <EditText
@@ -94,23 +86,18 @@
             android:alpha="0.6"
             android:background="@color/Contraste"
             android:hint="@string/newPassword"
-
-
             />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Confirmar contraseña -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till2"
         app:passwordToggleEnabled="true"
-
-
         >
 
         <EditText
@@ -120,29 +107,17 @@
             android:alpha="0.6"
             android:background="@color/Contraste"
             android:hint="@string/confirmPassword"
-
-
             />
-
-
-
-
-
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
+    <!-- Botón crear cuenta: recuerda implementar click listener en Activity. -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till3"
-
-
         >
 
         <Button
@@ -154,19 +129,12 @@
             android:text="@string/btncrearcuenta"
             android:textColor="@color/Negro"
             app:layout_constraintTop_toBottomOf="@+id/till4"
-
-
             />
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
-
-
-
-
-
+    <!-- Puntos de examen:
+         - ¿Cómo validar que las contraseñas coinciden en el Activity? (comprobar etPassword.getText().toString().equals(...)).
+         - ¿Qué implica app:passwordToggleEnabled? (muestra icono para mostrar/ocultar contraseña).
+         - ¿Por qué usar styles y themes en lugar de android:background directo? (consistencia y Material guidelines). -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

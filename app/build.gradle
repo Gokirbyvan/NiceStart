@@ -1,48 +1,79 @@
 plugins {
+    // Carga el plugin de aplicación Android usando el alias definido en libs.versions.toml
     alias(libs.plugins.android.application)
 }
 
 android {
+    // Define el namespace del proyecto (paquete base para recursos generados)
     namespace 'com.example.nicestart'
+
+    // Versión del SDK con el que compilas la app
     compileSdk 36
 
     defaultConfig {
+        // Identificador único de la aplicación
         applicationId "com.example.nicestart"
+
+        // Mínima versión de Android soportada
         minSdk 24
+
+        // Versión objetivo de Android
         targetSdk 36
+
+        // Código interno de versión (para Google Play)
         versionCode 1
+
+        // Nombre visible de la versión
         versionName "1.0"
 
+        // Runner para los tests instrumentados
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
+            // minifyEnabled activa ProGuard para reducir/optimizar código en release
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            // Archivos que usa ProGuard para ofuscar/optimizar la app
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
         }
     }
+
     compileOptions {
+        // Versión de Java usada para compilar
         sourceCompatibility JavaVersion.VERSION_11
+
+        // Versión objetivo de bytecode Java
         targetCompatibility JavaVersion.VERSION_11
     }
 }
 
 dependencies {
 
-    implementation libs.appcompat
-    implementation libs.material
-    implementation libs.activity
-    implementation libs.constraintlayout
+    // Librerías base de AndroidX (se cargan desde libs.versions.toml)
+    implementation libs.appcompat        // Compatibilidad y componentes básicos
+    implementation libs.material         // Componentes Material Design
+    implementation libs.activity         // Compatibilidad con Activity
+    implementation libs.constraintlayout // Diseños con ConstraintLayout
+
+    // Dependencias para test unitarios
     testImplementation libs.junit
+
+    // Dependencias para test instrumentados (en dispositivo/emulador)
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 
-
+    // SwipeRefreshLayout: permite hacer "pull to refresh"
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
+    // Glide: carga y cachea imágenes
     implementation 'com.github.bumptech.glide:glide:4.16.0'
-    implementation 'com.airbnb.android:lottie:+'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
 
+    // Lottie: animaciones en JSON hechas con After Effects
+    implementation 'com.airbnb.android:lottie:+'
+
+    // Necesario para que Glide genere código automáticamente (procesador de anotaciones)
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
 }

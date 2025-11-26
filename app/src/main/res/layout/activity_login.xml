@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout: pantalla de login.
+     Observaciones globales:
+     - Se usa ConstraintLayout con background gradient.
+     - Hay ImageView ocupando match_parent (gatohmmm) — ojo: puede tapar otros views si no gestionas z-order o alpha.
+     - Usar TextInputEditText en vez de EditText dentro de TextInputLayout para compatibilidad Material. -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,6 +11,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient">
 
+    <!-- Guideline izquierda 15% -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
@@ -14,6 +20,7 @@
         app:layout_constraintGuide_percent="0.15"
         />
 
+    <!-- Guideline derecha 85% -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -22,6 +29,9 @@
         app:layout_constraintGuide_percent="0.85"
         />
 
+    <!-- Imagen de fondo (gatohmmm).
+         Atención: está a match_parent width/height; los siguientes views están posicionados sobre ella por orden de layout (z-index).
+         Si quieres que actúe como background, es preferible usar android:background en el ConstraintLayout o ajustar alpha. -->
     <ImageView
         android:id="@+id/gatohmmm"
         android:layout_width="match_parent"
@@ -29,6 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Logo centrado entre guidelines -->
     <ImageView
         android:id="@+id/Logo"
         android:layout_width="80dp"
@@ -39,20 +50,19 @@
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/Contraste"
-
         />
 
+    <!-- TextInputLayout + EditText para usuario.
+         Nota: Material recomienda usar <com.google.android.material.textfield.TextInputEditText>
+         También: evitar android:background directo y usar style/theme para MaterialComponents. -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/Logo"
-
-
         >
 
         <EditText
@@ -62,27 +72,17 @@
             android:alpha="0.6"
             android:background="@color/Contraste"
             android:hint="@string/User" />
-
-
-
-
-
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
+    <!-- TextInputLayout para password -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till1"
         app:passwordToggleEnabled="true"
-
-
         >
 
         <EditText
@@ -92,29 +92,19 @@
             android:alpha="0.6"
             android:background="@color/Contraste"
             android:hint="@string/Password"
-
-
             />
-
-
-
-
-
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
+    <!-- Botón de acceso dentro de un TextInputLayout (poco ortodoxo, pero válido).
+         Ojo: app:layout_constraintTop_toBottomOf="@+id/till3" en el botón hace referencia al propio till3 — no tiene efecto.
+         Además: se usa android:onClick="openMain" — debe existir un método public void openMain(View) en la Activity. -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till2"
-
-
         >
 
         <Button
@@ -127,41 +117,30 @@
             android:textColor="@color/Negro"
             android:text="@string/btnAcceder"
             android:onClick="openMain"
-
             />
-
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Botón para registrarse -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-
-
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till3"
-
-
         >
 
         <Button
             app:layout_constraintTop_toBottomOf="@+id/till3"
             android:text="@string/btnRegistrarse"
-
             style="@style/buttonoutlined"
             android:onClick="openSign"
-
-
             />
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
-
-
+    <!-- Puntos de examen:
+         - ¿Qué hace android:onClick? (Responde: llama a método público con firma (View) en la Activity).
+         - ¿Por qué usar TextInputEditText? (Mejor integración con TextInputLayout).
+         - Explica z-order y por qué gatohmmm puede tapar elementos (orden XML y elevation). -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

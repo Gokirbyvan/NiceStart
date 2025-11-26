@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout: pantalla de foto de perfil.
+     Comentarios: usa ConstraintLayout con 2 guidelines verticales para centrar elementos.
+     Recomendación: evita hardcoded strings (usa strings.xml). Añadir contentDescription a ImageView. -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +12,7 @@
 
     tools:context=".activity_fotoperfil">
 
-
+    <!-- Guideline vertical a 15%: útil para márgenes adaptativos -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
@@ -17,6 +20,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.15" />
 
+    <!-- Guideline vertical a 85%: corresponde al margen derecho simétrico -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -24,35 +28,42 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.85" />
 
-
-
-
-
+    <!-- Imagen de perfil redonda (id imagenRedonda).
+         Nota: aquí no se aplica clipToOutline ni Shape — si quieres círculo perfecto, usar ShapeDrawable o Glide con transformación.
+         Añadir android:contentDescription por accesibilidad. -->
     <ImageView
         android:id="@+id/imagenRedonda"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
-
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="centerCrop"
-       />
+        />
 
-
+    <!-- Texto descriptivo debajo de la imagen.
+         Observaciones:
+         - Se usa width=0dp para que el constraint determine el ancho (match constraints).
+         - Texto hardcoded (usa strings.xml en producción/examen).
+         - Considera android:maxLines y ellipsize si puede desbordar. -->
     <TextView
-    android:id="@+id/texto"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="24dp"
-    android:text="Somalia con altramuces en Audi Q3 fue a patatas con jamón"
+        android:id="@+id/texto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Somalia con altramuces en Audi Q3 fue a patatas con jamón"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/imagenRedonda"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2" />
 
-    android:textSize="18sp"
-    android:textStyle="bold"
-    android:gravity="center"
-    app:layout_constraintTop_toBottomOf="@id/imagenRedonda"
-    app:layout_constraintStart_toStartOf="@id/guideline1"
-    app:layout_constraintEnd_toEndOf="@id/guideline2" />
+    <!-- Puntos de examen sobre este layout:
+         1) ¿Por qué usar guidelines en vez de padding? (Responde: adaptabilidad y diseño responsive).
+         2) Cómo centrar horizontalmente un view dentro de ConstraintLayout (usa start/end constraints a dos referencias).
+         3) Cómo hacer que la imagen sea circular en runtime (métodos: usar Shape, CardView con radius o librería Glide/coil).
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

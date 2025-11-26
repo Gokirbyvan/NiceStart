@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout: Splash screen con logo y animación Lottie.
+     Observaciones:
+     - LottieAnimationView con autoPlay y loop para animación.
+     - El diseño probablemente no necesita interacción; la Activity debe cerrarse con finish() tras timeout o tras cargar estado.
+     - tools:ignore="MissingConstraints" está presente en Lottie: mejor poner constraints explícitas. -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,6 +28,7 @@
         app:layout_constraintGuide_percent="0.7"
         />
 
+    <!-- Imagen de fondo Backview -->
     <ImageView
         android:id="@+id/Backview"
         android:layout_width="match_parent"
@@ -30,6 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- Logo centrado con marginTop grande -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="111dp"
@@ -40,9 +47,9 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-
         app:tint="@color/Contraste" />
 
+    <!-- Texto NiceStart con fuente custom -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,12 +61,9 @@
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
-
-
-
+    <!-- Animación Lottie (running_cat) -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/Logo2"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -67,8 +71,9 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/running_cat"
-
         tools:ignore="MissingConstraints" />
 
-
+    <!-- Puntos de examen:
+         - ¿Cómo detener la animación Lottie en onPause()? (Logo2.cancelAnimation()).
+         - ¿Cuál es la forma correcta de implementar splash moderno (usar theme windowBackground en Android 12+)? -->
 </androidx.constraintlayout.widget.ConstraintLayout>

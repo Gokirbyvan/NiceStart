@@ -23,42 +23,41 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+
+        // Ajuste de barras del sistema al layout
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.login), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
+        // Carga una imagen en el ImageView del gato
         ImageView gato = findViewById(R.id.gatohmmm);
+
         Glide.with(this)
                 .load(getDrawable(R.drawable.hmmmmm))
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.logofuego_background)))
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-//                .circleCrop()
                 .into(gato);
-
-
-
     }
 
+    // Botón que abre el MainActivity y borra historial para no volver atrás
     public void openMain(View v){
-        //FLAG -> sales de la aplicacion si le das atras
         Intent intent = new Intent(Login.this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-
     }
+
+    // Botón que abre la pantalla de registro
     public void openSign(View v){
         Intent intent = new Intent(Login.this, SignUp.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-
     }
-
 }
