@@ -1,6 +1,7 @@
 package com.example.nicestart;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -19,6 +20,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
@@ -105,7 +107,38 @@ public class MainActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.itemSettings) {
             Toast.makeText(this, "open settings", Toast.LENGTH_LONG).show();
         }
+        else if(item.getItemId() == R.id.itemExit){
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+
+            builder.setTitle("Quieres salir?");
+            builder.setMessage("Muy importante y tal");
+            //builder.setIcon(R.drawable."icono")
+
+            builder.setPositiveButton("Sis", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(MainActivity.this, Login.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                        }
+                    }
+
+            );
+
+            builder.setNegativeButton("Non", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    }
+
+            );
+
+            builder.show();
+        }
 
         return false;
     }
+
 }

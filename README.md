@@ -4,6 +4,7 @@
 
 ![login_activity](img/login.png)
 ![login_activity](img/signup.png)
+![mainActivity](img/CapExit.png)
 
 
 
@@ -252,7 +253,10 @@ ivan
 ivan
 
 **TODO LO DEMÁS**  
-ivan  
+ivan
+
+**Agradecimientos especiales con mucho amor y cariño**
+dela
 
 **Renuncia**
 Estos creditos deben tomarse de la forma mas ironica posible

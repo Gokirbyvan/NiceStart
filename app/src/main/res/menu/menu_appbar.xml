@@ -5,6 +5,10 @@
         android:id="@+id/itemCopy"
         android:title="Copy"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/itemExit"
+        android:title="Exit"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/itemSettings"
