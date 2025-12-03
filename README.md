@@ -3,9 +3,17 @@
 **I ate my project that is all i love you bye**
 
 ![login_activity](img/login.png)
+LOGIN
 ![login_activity](img/signup.png)
+SINGUP
 ![mainActivity](img/CapExit.png)
-
+Exit Login
+![mainActivity](img/appbar.png)
+Appbar
+![mainActivity](img/ContextMenu.png)
+Context Menu
+![mainActivity](img/Notificacion.png)
+Notification
 
 
 
