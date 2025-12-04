@@ -27,7 +27,7 @@ ivan
 ivan
 
 **Subprogramador de respaldo (por si acaso)**  
-dela
+ivansito
 
 **Director creativo**  
 ivan
