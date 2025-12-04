@@ -9,6 +9,7 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,18 +27,35 @@ import com.google.android.material.snackbar.Snackbar;
 public class MainActivity extends AppCompatActivity {
 
     private SwipeRefreshLayout swipeLayout;
+    private WebView miVisorWeb;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        miVisorWeb = (WebView) findViewById(R.id.vistaweb);
+
+        String html = "<html>"+
+                "<head><style>"+
+                "html, body { margin:0; padding:0; Height:100%; overflow:hidden }"+
+                "img{ width:100%; height:100%; object-fit:cover; }"+
+                "</style></head>"+
+                "<body>"+
+                "<img src = 'https://thispersondoesnotexist.com' />"+
+                "</body></html>";
+
+
+        miVisorWeb.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
+
         // TEXTVIEW QUE TENDRÁ MENÚ CONTEXTUAL AL PULSARLO CON LONG-CLICK
-        TextView mycontext = findViewById(R.id.mytext);
-        registerForContextMenu(mycontext); // Activa menú contextual
+        //TextView mycontext = findViewById(R.id.mytext);
+        //registerForContextMenu(mycontext); // Activa menú contextual
+
+        WebView mycontext = findViewById(R.id.vistaweb);
+        registerForContextMenu(mycontext);
 
         // SwipeRefresh (gesto de arrastrar hacia abajo)
         swipeLayout = findViewById(R.id.swipe);
@@ -65,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             snackbar.show();
 
             // Oculta el icono de recarga
+            miVisorWeb.reload();
             swipeLayout.setRefreshing(false);
         }
     };

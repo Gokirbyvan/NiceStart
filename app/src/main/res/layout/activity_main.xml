@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Layout principal de la app.
-     Observaciones:
-     - Contiene SwipeRefreshLayout que ocupa todo el espacio.
-     - El TextView dentro del SwipeRefreshLayout está vacío: probablemente placeholder.
-     - Hay Logo y mytext definidas también como hijos directos del ConstraintLayout (fuera del Swipe) -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,38 +8,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/maingradient">
 
-    <!-- SwipeRefreshLayout: para refrescar contenido tirando hacia abajo.
-         Atención: sólo puede tener un hijo directo; aquí tiene un TextView que ocupa todo.
-         En la Activity se debe inicializarlo con setOnRefreshListener y actualizar datos. -->
+    <!-- SwipeRefreshLayout con WebView funcional -->
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-        <TextView
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/vistaweb"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <!-- Guidelines para posicionamiento entre 15% y 85% -->
+
+
+
+    <!--
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15"
-        />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85"
-        />
+        app:layout_constraintGuide_percent="0.85" />
 
-    <!-- Logo en la parte superior -->
     <ImageView
         android:id="@+id/Logo"
         android:layout_width="80dp"
@@ -53,13 +48,8 @@
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/Contraste"
-        />
+        app:tint="@color/Contraste" />
 
-    <!-- Texto central "Hello World!".
-         Observaciones:
-         - Está centrado por constraints a los 4 lados del parent (esto lo centra).
-         - Para cambiar texto usa strings.xml. -->
     <TextView
         android:id="@+id/mytext"
         android:layout_width="wrap_content"
@@ -68,10 +58,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+    -->
 
-    <!-- Puntos de examen:
-         - ¿Cómo habilitar Refresh programáticamente en SwipeRefreshLayout? (setRefreshing(true/false)).
-         - ¿Por qué SwipeRefreshLayout solo permite un hijo? (diseño API).
-         - ¿Cómo posicionar un view centrado en ConstraintLayout? (constrain a start/end y top/bottom o usar center attributes). -->
 </androidx.constraintlayout.widget.ConstraintLayout>
