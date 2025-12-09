@@ -28,7 +28,7 @@ public class SignUp extends AppCompatActivity {
         ImageView hijo = findViewById(R.id.hijo_llora);
 
         Glide.with(this)
-                .load(getDrawable(R.drawable.son))
+                .load(getDrawable(R.drawable.cometa))
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.logofuego_background)))
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()

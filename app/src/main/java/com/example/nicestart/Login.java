@@ -34,11 +34,11 @@ public class Login extends AppCompatActivity {
             return insets;
         });
 
-        // Carga una imagen en el ImageView del gato
+        // Carga una imagen en el ImageView del volcan (Antes era un gato)
         ImageView gato = findViewById(R.id.gatohmmm);
 
         Glide.with(this)
-                .load(getDrawable(R.drawable.hmmmmm))
+                .load(getDrawable(R.drawable.volcan))
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.logofuego_background)))
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
