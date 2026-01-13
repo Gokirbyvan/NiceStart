@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Negro">#000000</color>
+    <color name="Blanco">#7C7C7C</color>
+    <color name="gradiaInicio">#6F2128</color>
+    <color name="Contraste">#C1C145</color>
+    <color name="gradiaFinal">#898449</color>
+    <color name="AzulBrillante">#427C87</color>
+    <color name="TransParente">#00000000</color>
+
+    <color name="gradiaFinal1">#396B4B</color>
+    <color name="AzulBrillante1">#3F2852</color>
+</resources>
