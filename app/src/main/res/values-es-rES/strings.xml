@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NiceStart</string>
+    <string name="User">Usuario</string>
+    <string name="Password">Contraseña</string>
+    <string name="btnAcceder">Acceder</string>
+    <string name="btnRegistrarse">Registrarse</string>
+    <string name="newuser">Nombre del usuario</string>
+    <string name="newPassword">Contraseña</string>
+    <string name="confirmPassword">Confirmar contraseña</string>
+    <string name="btncrearcuenta">Crear cuenta</string>
+</resources>
