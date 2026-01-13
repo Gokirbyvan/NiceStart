@@ -2,8 +2,9 @@
 
 **I ate my project that is all i love you bye**
 
-Traduccion al castellano lista
-Modo noche listo
+**Traduccion al castellano lista**
+
+**Modo noche listo**
 
 ![login_activity](img/login.png)
 LOGIN
