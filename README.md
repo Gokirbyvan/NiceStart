@@ -2,6 +2,8 @@
 
 **I ate my project that is all i love you bye**
 
+Traduccion al castellano lista
+
 ![login_activity](img/login.png)
 LOGIN
 ![login_activity](img/signup.png)
