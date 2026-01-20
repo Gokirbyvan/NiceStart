@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/flechaup"
+        android:title="chair"
+        android:icon="@drawable/flechaup"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/levelUp"
+        android:title="lenguaje"
+        android:icon="@drawable/uplevel"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

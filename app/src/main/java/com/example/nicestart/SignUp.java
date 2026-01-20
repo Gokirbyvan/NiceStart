@@ -25,7 +25,8 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         // Carga la imagen del niño llorando
-        ImageView hijo = findViewById(R.id.hijo_llora);
+        ImageView hijo = findViewById(R.id.fondo_cometa);
+
 
         Glide.with(this)
                 .load(getDrawable(R.drawable.cometa))
@@ -34,5 +35,12 @@ public class SignUp extends AppCompatActivity {
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(hijo);
+    }
+
+    public void openMain(View v){
+        Intent intent = new Intent(SignUp.this, MainBab.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }

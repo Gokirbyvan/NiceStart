@@ -6,6 +6,8 @@
 
 **Modo noche listo**
 
+**añadido bottomAppBar**
+
 ![login_activity](img/login.png)
 LOGIN
 ![login_activity](img/signup.png)
@@ -18,6 +20,9 @@ Appbar
 Context Menu
 ![mainActivity](img/Notificacion.png)
 Notification
+
+![bottomAppBar](img/bottomAppBar.png)
+Bottom AppBar
 
 
 

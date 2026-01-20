@@ -28,7 +28,7 @@
 
     <!-- Imagen de fondo (hijo_llora). Igual que antes, usar como background o ajustar alpha si tapa elementos -->
     <ImageView
-        android:id="@+id/hijo_llora"
+        android:id="@+id/fondo_cometa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -121,6 +121,7 @@
         >
 
         <Button
+            android:onClick="openMain"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="60dp"
