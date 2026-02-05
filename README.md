@@ -24,6 +24,12 @@ Notification
 ![bottomAppBar](img/bottomAppBar.png)
 Bottom AppBar
 
+![OptionsMenu](img/OptionsMenu.png)
+Options menu
+
+![ProfileMenu](img/ProfileMenu.png)
+Profile menu
+
 
 
 **Creador del proyecto**  
